@@ -1,143 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-body{
-  padding: 0; margin: 0;
-  box-sizing: border-box;
-  font-family: 'Lato', monospace;
-}
-
-/* Container for the entire layout */
+/* App.css */
 .container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: #f0f0f0;
 }
 
-/* Hero section containing the background image */
 .hero {
   position: relative;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 60vh;
 }
 
-/* Background image styling */
 .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.heading{
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.heading h1{
-  font-size: 3rem;
-  color: rgb(124, 78, 18);
-}
-
-/* Glassmorphism container */
-.glassmorph {
+.heading {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%; height: 600px;
-  max-width: 600px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  z-index: 1; /* Ensure it is above the image */
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Styling for the content inside the glassmorphism container */
+.glassmorph {
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  margin-top: -5rem;
+}
+
 .exchange-container {
-  /* Add your custom styles here */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.upper-upperhalf {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.middle-upperhalf {
+  display: flex;
+  justify-content: space-between;
+}
+
+.currency, .amount, .exchanged-currency, .exchanged-amount {
+  width: 48%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.swap {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.swap img {
+  cursor: pointer;
+  width: 2rem;
+}
+
+.info {
   text-align: center;
 }
 
-.upper-upperhalf{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.from, .to{
-  font-size: 1.6em;
-  font-weight: 300;
-  color: rgb(90, 69, 43);
-}
-
-.middle-upperhalf{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-input::placeholder{
-  color: rgb(139, 137, 137);
-}
-
-.amount , .currency{
-  border: none;
-  outline: none;
-  padding: 10px;
-  margin: 5px;
-}
-
-.swap{
-  margin-top: 30px;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swap img{
-  width: 50px; height: 50px;
-}
-
-.info{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-}
-
-.rate h3{
-  font-size: 1.8em;
-  color: rgb(212, 203, 171);
-  font-weight: 700;
-}
-
-.rate h4{
-  font-size: 1.4em;
-  color: rgb(212, 203, 171);
-  font-weight: 300;
-}
-
-.rate h4:hover{
-  font-size: 2.1em;
-  color: rgb(206, 203, 193);
-  font-weight: 700;
-}
-
-.rate h3:hover{
-  color: rgb(226, 220, 197);
+.rate h3, .rate h4 {
+  margin: 0.5rem 0;
 }
