@@ -1,38 +1,143 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+  padding: 0; margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', monospace;
+}
+
+/* Container for the entire layout */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hero section containing the background image */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background image styling */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heading{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading h1{
+  font-size: 3rem;
+  color: rgb(124, 78, 18);
+}
+
+/* Glassmorphism container */
+.glassmorph {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; height: 600px;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1; /* Ensure it is above the image */
+}
+
+/* Styling for the content inside the glassmorphism container */
+.exchange-container {
+  /* Add your custom styles here */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.upper-upperhalf{
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.from, .to{
+  font-size: 1.6em;
+  font-weight: 300;
+  color: rgb(90, 69, 43);
+}
+
+.middle-upperhalf{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input::placeholder{
+  color: rgb(139, 137, 137);
+}
+
+.amount , .currency{
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 5px;
+}
+
+.swap{
+  margin-top: 30px;
+  width: 100%;
+  height: 100px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.swap img{
+  width: 50px; height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+}
+
+.rate h3{
+  font-size: 1.8em;
+  color: rgb(212, 203, 171);
+  font-weight: 700;
+}
+
+.rate h4{
+  font-size: 1.4em;
+  color: rgb(212, 203, 171);
+  font-weight: 300;
+}
+
+.rate h4:hover{
+  font-size: 2.1em;
+  color: rgb(206, 203, 193);
+  font-weight: 700;
+}
+
+.rate h3:hover{
+  color: rgb(226, 220, 197);
 }
